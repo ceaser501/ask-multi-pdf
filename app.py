@@ -87,7 +87,7 @@ def main():
             with st.spinner("Processing"):
                 # get pdf text
                 raw_text = get_pdf_text(pdf_docs)
-                # st.write(raw_text)
+                st.write(raw_text)
 
                 # get the text chunks
                 text_chunks = get_text_chunks(raw_text)
