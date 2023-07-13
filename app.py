@@ -11,7 +11,9 @@ from langchain.llms import HuggingFaceHub
 import pandas as pd
 
 def get_excel_text(excel_docs):
-    e_text = pd.read_excel(excel_docs)
+    e_text = ""
+    for file_path in excel_docs:
+        e_text += pd.read_excel(excel_docs)
     return e_text
 
 def get_pdf_text(pdf_docs):
